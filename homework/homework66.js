@@ -11,9 +11,17 @@ const elements = document.getElementsByClassName('element');
 
 for (let i = 0; i < elements.length; i++) {
     if (i < 3) {
-        elements[i].style.color = 'red';   // первые 3 — красный
+        elements[i].style.color = 'red';
     } else {
-        elements[i].style.color = 'green'; // остальные — зелёный
+        elements[i].style.color = 'green';
     }
+}
 
+const container = document.getElementById('container');
+
+for (let i = 1; i <= 5; i++) {
+    const div = document.createElement('div');
+    div.classList.add('element');
+    div.innerHTML = `Element ${i}`;
+    container.append(div);
 }
